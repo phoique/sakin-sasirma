@@ -1,37 +1,45 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-import Button from '../components/Button';
+import { View, StyleSheet } from 'react-native';
+import CustomButton from '../components/CustomButton';
+import CustomText from '../components/CustomText';
 
 export default class Home extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.text}>En yüksek skor: 234</Text>
-        <Button text='Oyuna Başla' textStyle={styles.textStyle} touchStyle={styles.buttonStyle}/>
+
+        <CustomText 
+          text='En yüksek skor 234' 
+          textStyle={textStyles.text} 
+        />
+
+        <CustomButton 
+          text='Oyuna Başla' 
+          textStyle={buttonStyles.text} 
+          touchStyle={buttonStyles.button}
+        />
+
       </View>
     )
   }
 }
 
 const styles = StyleSheet.create({
-
   container: {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
   },
+});
 
+const buttonStyles = StyleSheet.create({
   text: {
-    marginTop: 80,
-    fontSize: 18
-  },
-  textStyle: {
     color: 'white',
     fontSize: 22,
   },
 
-  buttonStyle: {
+  button: {
     backgroundColor: 'white',
     alignItems: 'center',
     justifyContent: 'center',
@@ -41,5 +49,11 @@ const styles = StyleSheet.create({
     height: 60,
     width: 220
   }
+});
 
+const textStyles = StyleSheet.create({
+  text: {
+    marginTop: 80,
+    fontSize: 20
+  },
 });
