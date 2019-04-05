@@ -1,28 +1,31 @@
-import React, { Component } from 'react';
+import React, { useContext } from 'react';
 import { View, StyleSheet } from 'react-native';
 import CustomButton from '../components/CustomButton';
 import CustomText from '../components/CustomText';
+import { Context, action } from '../store/Store';
 
-export default class Home extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
+export default Home = () => {
 
-        <CustomText 
-          text='En yüksek skor 234' 
-          textStyle={textStyles.text} 
-        />
+  const { state, dispatch } = useContext(Context);
 
-        <CustomButton 
-          text='Oyuna Başla' 
-          textStyle={buttonStyles.text} 
-          touchStyle={buttonStyles.button}
-        />
+  return (
+    <View style={styles.container}>
 
-      </View>
-    );
-  }
-}
+      <CustomText 
+        text= {`En yüksek skor ${state.score}`} 
+        textStyle={textStyles.text} 
+      />
+
+      <CustomButton 
+        text='Oyuna Başla' 
+        textStyle={buttonStyles.text} 
+        touchStyle={buttonStyles.button}
+        OnClick= {() => dispatch(action('game'))}
+      />
+
+    </View>
+  );
+};
 
 const styles = StyleSheet.create({
   container: {

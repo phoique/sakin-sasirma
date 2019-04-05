@@ -1,7 +1,8 @@
 import React, { createContext, useReducer } from 'react';
 
 const initialState = {
-  navigation: 'home'
+  navigation: 'home',
+  score: 123
 }
 
 const CHANGE = 'CHANGE';
