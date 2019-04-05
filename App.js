@@ -11,20 +11,22 @@ export default class App extends Component {
     this.state = {
       navigator: 'home'
     };
+
   }
 
+  changeNavigator = (navigator) => this.setState({ navigator }); 
+
   render() {
-    let nav;
 
     switch (this.state.navigator) {
       case 'home':
         return <Home />;
-        break;
       case 'game':
         return <Game />;
-        break;
       case 'endgame': 
         return <EndGame />;
+      default:
+        <Home />
         break;
     }
   }

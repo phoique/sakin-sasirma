@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { View, StyleSheet } from 'react-native';
 import CustomButton from '../components/CustomButton';
 import CustomText from '../components/CustomText';
-import Play from './Game';
 
 export default class Home extends Component {
   render() {
@@ -18,7 +17,6 @@ export default class Home extends Component {
           text='Oyuna Başla' 
           textStyle={buttonStyles.text} 
           touchStyle={buttonStyles.button}
-          OnClick= {() => <Play />}
         />
 
       </View>
