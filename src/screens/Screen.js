@@ -1,13 +1,14 @@
-import React, {Component, useState} from 'react';
+import React, { useContext } from 'react';
 import Home from './Home';
 import Game from './Game';
 import EndGame from './EndGame';
+import { Context } from '../store/Store';
 
 export default Screen = () => {
 
-  const [navigation, setNavigation] = useState('home');
+  const { state } = useContext(Context);
   
-  switch (navigation) {
+  switch (state.navigation) {
     case 'home':
       return <Home />;
     case 'game':
