@@ -4,13 +4,22 @@ import CustomText from '../components/CustomButton';
 import CustomButton from '../components/CustomButton';
 
 export default class Game extends Component {
+
+  constructor(props) {
+  super(props);
+
+  this.state = {
+    rightColor: 'Mor',
+    rightColorCode: 'purple',
+  };
+}
+
   render() {
     return (
       <View>
-
         <CustomText 
-          text='KIRMIZI' 
-          textStyle = {textStyles.text} 
+          text={this.state.rightColor}
+          textStyle = {[textStyles.text, {backgroundColor: this.state.rightColorCode}]} 
           viewStyle = {textStyles.view}
         />
 
