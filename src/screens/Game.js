@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Text, View, StyleSheet } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import CustomText from '../components/CustomButton';
 import CustomButton from '../components/CustomButton';
 
@@ -9,33 +9,58 @@ export default class Game extends Component {
       <View>
 
         <CustomText 
-        text='KIRMIZI' 
-        textStyle = {textStyles.text} 
-        viewStyle = {textStyles.view}
+          text='KIRMIZI' 
+          textStyle = {textStyles.text} 
+          viewStyle = {textStyles.view}
         />
 
-
+        <View style = {styles.containerFlex}>
           <CustomButton 
-          text='Oyuna Başla' 
-          textStyle = {buttonStyles.text} 
-          touchStyle = {buttonStyles.button}
+            text='Kırmızı' 
+            textStyle = {buttonStyles.text} 
+            touchStyle = {buttonStyles.button}
           />
           <CustomButton 
-          text='Oyuna Başla' 
-          textStyle = {buttonStyles.text} 
-          touchStyle = {buttonStyles.button}
+            text='Mavi' 
+            textStyle = {buttonStyles.text} 
+            touchStyle = {buttonStyles.button}
           />
           <CustomButton 
-          text='Oyuna Başla' 
-          textStyle = {buttonStyles.text} 
-          touchStyle = {buttonStyles.button}
+            text='Yeşil' 
+            textStyle = {buttonStyles.text} 
+            touchStyle = {buttonStyles.button}
           />
-
+          <CustomButton 
+            text='Sarı' 
+            textStyle = {buttonStyles.text} 
+            touchStyle = {buttonStyles.button}
+          />
+          <CustomButton 
+            text='Turuncu' 
+            textStyle = {buttonStyles.text} 
+            touchStyle = {buttonStyles.button}
+          />
+          <CustomButton 
+            text='Siyah' 
+            textStyle = {buttonStyles.text} 
+            touchStyle = {buttonStyles.button}
+          />
+        </View>
 
       </View>
     );
   }
 }
+
+const styles = StyleSheet.create({
+  containerFlex: {
+    flexDirection: 'row',
+    flexWrap: 'wrap', 
+    padding: 15, 
+    alignContent: 'center', 
+    alignItems: 'center',
+  }
+});
 
 const textStyles = StyleSheet.create({
   text: {
@@ -47,6 +72,7 @@ const textStyles = StyleSheet.create({
     paddingLeft: 30,
     paddingRight: 30
   },
+
   view: {
     alignItems: 'center'
   }
@@ -63,7 +89,7 @@ const buttonStyles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: '#3498db',
-    marginTop: 30,
+    marginTop: 20,
     borderRadius: 20,
     height: 110,
     width: 110,
