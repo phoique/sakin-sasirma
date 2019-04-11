@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { View, StyleSheet } from 'react-native';
 import CustomText from '../components/CustomButton';
-import CustomButton from '../components/CustomButton';
 import ColorDetail from '../components/ColorDetail';
+import colorJSON from '../data/color.json';
 
 export default class Game extends Component {
 
@@ -12,8 +12,7 @@ export default class Game extends Component {
   this.state = {
     rightColor: 'Mor',
     rightColorCode: 'purple',
-    colors: ['Turuncu', 'Mavi', 'Kırmızı', 'Sarı', 'Siyah', 'Mor'],
-    colorCode: ['orange', 'blue', 'red', 'yellow', 'black', 'purple']
+    colors: Object.keys(colorJSON),
   };
 }
 
@@ -32,7 +31,7 @@ export default class Game extends Component {
               <ColorDetail 
                 key={key} 
                 name = {color} 
-                code = {colorCode[key]} 
+                code = {colorJSON[color]} 
               />
             )
           }
