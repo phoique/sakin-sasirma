@@ -4,25 +4,29 @@ import CustomText from '../components/CustomButton';
 import ColorDetail from '../components/ColorDetail';
 import colorJSON from '../data/color.json';
 
+// Color key for example Kırmızı, Mavi...
+const colorKey = Object.keys(colorJSON);
+//Random color number
+const randomNumber = Math.floor(Math.random() * (colorKey.length + 1));
+
 export default class Game extends Component {
 
   constructor(props) {
   super(props);
 
   this.state = {
-    rightColor: 'Mor',
-    rightColorCode: 'purple',
-    colors: Object.keys(colorJSON),
+    rightColor: colorKey[randomNumber],
+    colors: colorKey,
   };
 }
 
   render() {
-    const { rightColor, rightColorCode, colors, colorCode } = this.state;
+    const { rightColor, colors} = this.state;
     return (
       <View>
         <CustomText 
           text={rightColor}
-          textStyle = {[textStyles.text, {backgroundColor: rightColorCode}]} 
+          textStyle = {[textStyles.text, {backgroundColor: colorJSON[rightColor]}]} 
           viewStyle = {textStyles.view}
         />
         <View style = {styles.containerFlex}>
