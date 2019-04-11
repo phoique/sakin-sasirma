@@ -2,11 +2,12 @@ import React from 'react';
 import { StyleSheet } from 'react-native';
 import CustomButton from './CustomButton';
 
-export default ColorDetail = ({name, code}) => (
+export default ColorDetail = ({name, code, rightName}) => (
   <CustomButton 
     text= {name} 
     textStyle = {buttonStyles.text} 
     touchStyle = {[buttonStyles.button, {backgroundColor: code}]}
+    OnClick = { () => alert( rightName === name ? "true": "false" ) }
   />
 );
 

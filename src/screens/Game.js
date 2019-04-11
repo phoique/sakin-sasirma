@@ -34,8 +34,9 @@ export default class Game extends Component {
             colors.map((color, key) => 
               <ColorDetail 
                 key={key} 
+                rightName = {rightColor}
                 name = {color} 
-                code = {colorJSON[color]} 
+                code = {colorJSON[color]}
               />
             )
           }
