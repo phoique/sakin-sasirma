@@ -20,7 +20,7 @@ $ react-native run-android & react-native run-ios
 
 ## Neler eksik, bir sonraki sürüm hakkında?
 
-Oyunu sadece eski android cihazımda test edip yaptığım için ne ios ne de diğer android telefonlar üzerinde test yapamadım. O yüzden kendi cihazımda neden böyle demeyin. :)
+Oyunu sadece eski android cihazımda test edip yaptığım için ne ios ne de diğer android telefonlar üzerinde test yapamadım. O yüzden kendi cihazımda tasarım neden böyle demeyin. :)
 
   
 
@@ -40,17 +40,13 @@ Oyunu sadece eski android cihazımda test edip yaptığım için ne ios ne de di
 
 - Tekrar eden kod optimizasyonu.
 
-- Tekrar eden styles kodları.
+- Tekrar eden styles kodları optimizasyonu.
 
 - Unit test yazılması.
 
   
 
 ## Nasıl görünüyor?(Eski Android cihazımda)
-
-Ana sayfa
 ![Ana sayfa](./src/images/home.png)
-Oyun alanı
 ![Oyun alanı](./src/images/game.png)
-Oyun bittiğinde
 ![Oyun bittiğinde](./src/images/endgame.png)
