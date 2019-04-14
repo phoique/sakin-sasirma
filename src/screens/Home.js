@@ -12,8 +12,13 @@ export default Home = () => {
     <View style={styles.container}>
 
       <CustomText 
-        text= {`En yüksek skor ${state.score}`} 
+        text= "Sakın Şaşırma" 
         textStyle={textStyles.text} 
+      />
+
+      <CustomText 
+        text= "Bakalım renkleri ne kadar görüp basabileceksin?" 
+        textStyle={textStyles2.text} 
       />
 
       <CustomButton 
@@ -39,7 +44,7 @@ const styles = StyleSheet.create({
 const buttonStyles = StyleSheet.create({
   text: {
     color: 'white',
-    fontSize: 22,
+    fontSize: 24,
   },
 
   button: {
@@ -47,7 +52,7 @@ const buttonStyles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: '#3498db',
-    marginTop: 120,
+    marginTop: 100,
     borderRadius: 30,
     height: 60,
     width: 220
@@ -56,7 +61,16 @@ const buttonStyles = StyleSheet.create({
 
 const textStyles = StyleSheet.create({
   text: {
-    marginTop: 80,
-    fontSize: 20
+    marginTop: 50,
+    fontSize: 28,
+    fontWeight: 'bold',
+  },
+});
+
+const textStyles2 = StyleSheet.create({
+  text: {
+    marginTop: 20,
+    fontSize: 20,
+    textAlign: 'center'
   },
 });
