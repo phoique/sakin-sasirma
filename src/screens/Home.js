@@ -17,7 +17,7 @@ const Home = () => {
       />
 
       <CustomText 
-        text= "Bakalım renkleri ne kadar görüp basabileceksin?" 
+        text= "Bakalım ne kadar dikkatlisin? Sakın renkleri şaşırma." 
         textStyle={textStyles2.text} 
       />
 
