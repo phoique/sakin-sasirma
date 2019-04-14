@@ -1,23 +1,26 @@
 import React, { createContext, useReducer } from 'react';
 
+// Default state
 const initialState = {
   navigation: 'home',
-  score: 123
 }
 
-const CHANGE = 'CHANGE';
+// Action type
+const Nav = 'Nav';
+
+// Action
 export const action = (navigation) => ({
-  type: CHANGE,
+  type: Nav,
   payload: {
     navigation
   }
 })
 
-
+// Reducer
 const Reducer = (state = initialState, { type, payload }) => {
   switch (type) {
 
-  case CHANGE:
+  case Nav:
     return { ...state, ...payload }
 
   default:
