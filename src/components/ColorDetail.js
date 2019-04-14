@@ -1,16 +1,24 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { StyleSheet } from 'react-native';
 import CustomButton from './CustomButton';
+import { Context, action } from '../store/Store';
 
-export default ColorDetail = ({name, code, rightName}) => (
-  <CustomButton 
-    text= {name} 
-    textStyle = {buttonStyles.text} 
-    touchStyle = {[buttonStyles.button, {backgroundColor: code}]}
-    OnClick = { () => alert( rightName === name ? "true": "false" ) }
-  />
-);
-
+export default ColorDetail = ({name, code, rightName}) => {
+  const { state, dispatch } = useContext(Context);
+  
+  return(
+    <CustomButton 
+      text= {name} 
+      textStyle = {buttonStyles.text} 
+      touchStyle = {[buttonStyles.button, {backgroundColor: code}]}
+      OnClick = { 
+        () => rightName === name ? 
+        alert("Doğru renk tebrikler :)") : 
+        dispatch(action('endgame')) 
+      }
+    />
+  );
+}
 const buttonStyles = StyleSheet.create({
   text: {
     color: 'white',
