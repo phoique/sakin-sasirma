@@ -1,8 +1,8 @@
 {
-  "Turuncu": "orange",
-  "Mavi": "blue",
-  "Kırmızı": "red",
-  "Sarı": "yellow",
-  "Siyah": "black",
-  "Mor": "purple"
+  "Turuncu": "#e67e22",
+  "Mavi": "#2980b9",
+  "Kırmızı": "#d63031",
+  "Sarı": "#e1b12c",
+  "Siyah": "#2f3640",
+  "Mor": "#6c5ce7"
 }
