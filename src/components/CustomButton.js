@@ -1,7 +1,7 @@
 import React from 'react';
-import { Text, View, TouchableOpacity, StyleSheet } from 'react-native';
+import { Text, View, TouchableOpacity } from 'react-native';
 
-export default CustomButton = ({ viewStyle, touchStyle, textStyle, text, OnClick }) => (
+const CustomButton = ({ viewStyle, touchStyle, textStyle, text, OnClick }) => (
   <View style={viewStyle}>
     <TouchableOpacity style={touchStyle} onPress = {OnClick}>
       <Text style={textStyle}>{text}</Text>
@@ -9,4 +9,5 @@ export default CustomButton = ({ viewStyle, touchStyle, textStyle, text, OnClick
   </View>
 );
 
+export default CustomButton;
 

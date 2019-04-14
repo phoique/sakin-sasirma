@@ -4,9 +4,9 @@ import CustomButton from '../components/CustomButton';
 import CustomText from '../components/CustomText';
 import { Context, action } from '../store/Store';
 
-export default Home = () => {
+const Home = () => {
 
-  const { state, dispatch } = useContext(Context);
+  const { dispatch } = useContext(Context);
 
   return (
     <View style={styles.container}>
@@ -48,7 +48,6 @@ const buttonStyles = StyleSheet.create({
   },
 
   button: {
-    backgroundColor: 'white',
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: '#3498db',
@@ -74,3 +73,5 @@ const textStyles2 = StyleSheet.create({
     textAlign: 'center'
   },
 });
+
+export default Home;

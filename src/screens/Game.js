@@ -12,13 +12,13 @@ const randomNumber = Math.floor(Math.random() * (colorKey.length + 1));
 export default class Game extends Component {
 
   constructor(props) {
-  super(props);
+    super(props);
 
-  this.state = {
-    rightColor: colorKey[randomNumber],
-    colors: colorKey,
-  };
-}
+    this.state = {
+      rightColor: colorKey[randomNumber],
+      colors: colorKey,
+    };
+  }
 
   render() {
     const { rightColor, colors} = this.state;

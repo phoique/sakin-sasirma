@@ -4,9 +4,9 @@ import CustomText from '../components/CustomText';
 import CustomButton from '../components/CustomButton';
 import { action, Context } from '../store/Store';
 
-export default EndGame = () => {
+const EndGame = () => {
 
-  const { state, dispatch } = useContext(Context);
+  const { dispatch } = useContext(Context);
 
   return(
     <View style={styles.container}>
@@ -48,7 +48,6 @@ const buttonStyles = StyleSheet.create({
   },
 
   button: {
-    backgroundColor: 'white',
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: '#3498db',
@@ -58,3 +57,5 @@ const buttonStyles = StyleSheet.create({
     width: 220
   }
 });
+
+export default EndGame;

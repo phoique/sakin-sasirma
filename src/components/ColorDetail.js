@@ -3,8 +3,8 @@ import { StyleSheet } from 'react-native';
 import CustomButton from './CustomButton';
 import { Context, action } from '../store/Store';
 
-export default ColorDetail = ({name, code, rightName}) => {
-  const { state, dispatch } = useContext(Context);
+const ColorDetail = ({name, code, rightName}) => {
+  const { dispatch } = useContext(Context);
   
   return(
     <CustomButton 
@@ -13,12 +13,13 @@ export default ColorDetail = ({name, code, rightName}) => {
       touchStyle = {[buttonStyles.button, {backgroundColor: code}]}
       OnClick = { 
         () => rightName === name ? 
-        alert("Doğru renk tebrikler :)") : 
-        dispatch(action('endgame')) 
+          alert('Doğru renk tebrikler :)') : 
+          dispatch(action('endgame')) 
       }
     />
   );
 }
+
 const buttonStyles = StyleSheet.create({
   text: {
     color: 'white',
@@ -26,7 +27,6 @@ const buttonStyles = StyleSheet.create({
   },
 
   button: {
-    backgroundColor: 'white',
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: 'orange',
@@ -37,3 +37,5 @@ const buttonStyles = StyleSheet.create({
     marginLeft: 20,
   },
 });
+
+export default ColorDetail;
