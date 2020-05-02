@@ -19,7 +19,7 @@
     "babel-jest": "25.5.1",
     "eslint": "5.16.0",
     "eslint-plugin-react": "7.19.0",
-    "jest": "25.5.3",
+    "jest": "25.5.4",
     "metro-react-native-babel-preset": "0.53.1",
     "react-test-renderer": "16.8.6"
   },
