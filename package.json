@@ -9,8 +9,8 @@
     "lintf": "eslint . --fix"
   },
   "dependencies": {
-    "react": "16.8.6",
-    "react-native": "0.59.4"
+    "react": "16.13.1",
+    "react-native": "0.62.2"
   },
   "devDependencies": {
     "@babel/core": "7.9.6",
@@ -21,7 +21,7 @@
     "eslint-plugin-react": "7.19.0",
     "jest": "25.5.4",
     "metro-react-native-babel-preset": "0.59.0",
-    "react-test-renderer": "16.8.6"
+    "react-test-renderer": "16.13.1"
   },
   "jest": {
     "preset": "react-native"
